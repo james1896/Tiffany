@@ -2,14 +2,6 @@ package com.tiffany.com.tiffany;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -65,6 +57,10 @@ public class MedicineActivity extends BaseActivity {
                 return null;
         }
     }
+
+
+    //  封装 数据
+
 
     private ArrayList<Map> ganmaoyongyao() {
 
