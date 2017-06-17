@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.tiffany.com.tiffany.adapter.MedicineListAdapter;
 
@@ -22,7 +23,8 @@ import java.util.Map;
  * Created by moses on 17/06/2017.
  */
 
-public class MedicineActivity extends AppCompatActivity {
+public class MedicineActivity extends BaseActivity {
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,8 @@ public class MedicineActivity extends AppCompatActivity {
         ListView listView = (ListView)findViewById(R.id.medicine_listview);
         listView.setAdapter(new MedicineListAdapter(this,getDataList(i)));
 
-        Log.e("medicine","Medicine"+i);
+        TextView title = (TextView) findViewById(R.id.medicine_title);
+        title.setText(new String[]{"滋补调养","男科用药","风湿骨科","肠胃用药","维生素钙","五官用药","皮肤用药","妇儿用药","感冒发烧"}[i-1]);
     }
 
     private ArrayList<Map> getDataList(int i){
