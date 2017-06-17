@@ -3,6 +3,7 @@ package com.tiffany.com.tiffany.adapter;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,7 +21,6 @@ public class MedicineListAdapter extends BaseListAdapter {
 
     public MedicineListAdapter(Context context, ArrayList<Map> list) {
         super(context, list);
-
         this.dataList = list;
     }
 
@@ -32,13 +32,12 @@ public class MedicineListAdapter extends BaseListAdapter {
 
         View item = mInflater.inflate(R.layout.medicine_listview_item, null);
         TextView title = (TextView)item.findViewById(R.id.ItemTitle);
-//        ImageView img = (ImageView)item.findViewById(R.id.imageView);
+        ImageView img = (ImageView)item.findViewById(R.id.imageView);
 
         String titleS = (String) map.get("title");
-//        int resid = (int) map.get("resId");
+        int resid = (int) map.get("resId");
         title.setText(titleS);
-
-//        img.setImageResource(resid);
+        img.setImageResource(resid);
         return item;
     }
 }
