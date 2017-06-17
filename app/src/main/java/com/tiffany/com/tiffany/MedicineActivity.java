@@ -2,14 +2,18 @@ package com.tiffany.com.tiffany;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tiffany.com.tiffany.adapter.MedicineListAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created by moses on 17/06/2017.
@@ -23,12 +27,25 @@ public class MedicineActivity extends BaseActivity {
         setContentView(R.layout.medicine_fragment);
 
         Intent intent = getIntent();
-        int i = intent.getIntExtra("com.tiffany.android_intent.age",0);
+        final int page = intent.getIntExtra("com.tiffany.android_intent.age",0);
         ListView listView = (ListView)findViewById(R.id.medicine_listview);
-        listView.setAdapter(new MedicineListAdapter(this,getDataList(i)));
+        listView.setAdapter(new MedicineListAdapter(this,getDataList(page)));
 
         TextView title = (TextView) findViewById(R.id.medicine_title);
-        title.setText(new String[]{"滋补调养","男科用药","风湿骨科","肠胃用药","维生素钙","五官用药","皮肤用药","妇儿用药","感冒发烧"}[i-1]);
+        title.setText(new String[]{"滋补调养","男科用药","风湿骨科","肠胃用药","维生素钙","五官用药","皮肤用药","妇儿用药","感冒发烧"}[page-1]);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                ArrayList<Map> list = getDataList(page);
+
+//                Map<String,Object> map = this.dataList.get(position);
+                Map<String,Object> map = list.get(i);
+                String titleS = (String) map.get("title");
+                Toast.makeText(MedicineActivity.this, titleS,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private ArrayList<Map> getDataList(int i){

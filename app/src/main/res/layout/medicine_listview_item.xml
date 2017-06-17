@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:id="@+id/MyListItem"
     android:paddingBottom="3dip"
-   >
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +21,7 @@
 
         android:paddingTop="2dp"
         android:paddingLeft="12dp"
-       >
+        >
 
         <TextView
             android:layout_height="wrap_content"
@@ -34,12 +34,13 @@
         </TextView>
 
         <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:textColor="#FF6599"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="17sp"
             android:text="price"
-        />
+            />
         <TextView
             android:id="@+id/Sales"
             android:layout_width="wrap_content"
@@ -51,10 +52,10 @@
 
     <!--底线-->
     <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0.5dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:background="#EEEEEE">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="#EEEEEE">-->
 
     <!--</View>-->
 </LinearLayout>
