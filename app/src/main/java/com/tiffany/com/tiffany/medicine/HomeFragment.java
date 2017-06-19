@@ -1,10 +1,9 @@
-package com.tiffany.com.tiffany;
+package com.tiffany.com.tiffany.medicine;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +12,8 @@ import android.widget.ListView;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
+import com.tiffany.com.tiffany.R;
 import com.tiffany.com.tiffany.adapter.HomeListAdapter;
-import com.tiffany.com.tiffany.adapter.MedicineListAdapter;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

@@ -41,13 +41,7 @@
             android:textSize="17sp"
             android:text="price"
             />
-        <TextView
-            android:id="@+id/Sales"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:text="sales"
-            />
+
     </LinearLayout>
 
     <!--底线-->

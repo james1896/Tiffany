@@ -1,4 +1,4 @@
-package com.tiffany.com.tiffany;
+package com.tiffany.com.tiffany.medicine;
 
 import android.content.Context;
 import android.view.View;

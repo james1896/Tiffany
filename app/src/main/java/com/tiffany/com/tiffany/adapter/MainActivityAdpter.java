@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 
 
-import com.tiffany.com.tiffany.HomeFragment;
-import com.tiffany.com.tiffany.MeFragment;
+import com.tiffany.com.tiffany.medicine.HomeFragment;
+import com.tiffany.com.tiffany.me.MeFragment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -33,10 +33,14 @@ public class MedicineListAdapter extends BaseListAdapter {
         View item = mInflater.inflate(R.layout.medicine_listview_item, null);
         TextView title = (TextView)item.findViewById(R.id.ItemTitle);
         ImageView img = (ImageView)item.findViewById(R.id.imageView);
+        TextView priceTv = (TextView) item.findViewById(R.id.price);
 
         String titleS = (String) map.get("title");
         int resid = (int) map.get("resId");
+        String price = (String) map.get("price");
+
         title.setText(titleS);
+        priceTv.setText(price);
         img.setImageResource(resid);
         return item;
     }
