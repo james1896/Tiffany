@@ -47,7 +47,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if(view == contentView){
-            Toast.makeText(context,"您想干啥？",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"么么哒, 您想干啥？",Toast.LENGTH_SHORT).show();
             return;
         }
         Intent intent = new Intent(Intent.ACTION_CALL);
